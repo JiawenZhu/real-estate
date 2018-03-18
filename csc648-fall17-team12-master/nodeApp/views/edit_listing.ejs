@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%=title%></title>
+        <script type="text/javascript" src="./../../js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="./../../js/listingScripts.js"></script>
+        <link rel="stylesheet" href="./../../css/style.css">
+
+    </head>
+<body>
+<p><a href="/fa17g12/api/admin">Back to home page</a></p>
+
+<form method="post" action="" id="the-form" enctype="multipart/form-data">
+    <table cellpadding="11">
+    <tr>
+        <td class="label">Address</td><td>: <input type="text" name="address" id="address" value="<%=data[0].address%>"></td>
+     </tr>
+    <tr>
+        <td class="label">City</td><td>: <input type="text" name="city" id="city" value="<%=data[0].city%>"></td>
+     </tr>
+      <tr>
+        <td class="label">State</td><td>: <input type="text" name="state" id="state" value="<%=data[0].state%>"></td>
+     </tr>      
+	 <tr>
+        <td class="label">Zip Code</td><td>: <input type="text" name="zip_code" id="zip_code" value="<%=data[0].zip_code%>"></td>
+     </tr>
+        <tr>
+            <input class="form-control" type="file" name="uploaded_image" accept=""/>
+        </tr>
+     <tr>
+        <td class="label"></td>
+        <td>
+            &nbsp; <input type="button" value="Save" onClick="editListing(<%=data[0].listing_id%>)">
+        </td>
+     </tr>
+    </table>
+</form>
+</body>
+</html>
